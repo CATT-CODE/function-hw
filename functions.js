@@ -43,24 +43,24 @@ const each = function (collection, iterator) {
 numbers = [1, 5, 7, 39, 40, 40, 40, 45]
 
 const indexOf = function (array, target) {
-  let result = -1;
+  let result = -1; //gives a starting value for the result variable
 
-  for (let i = 0; i < array.length; i++) {
-      if (array[i] === target) {
-        return result = i
+  for (let i = 0; i < array.length; i++) { //standard for / i loop
+      if (array[i] === target) { //conditional check, if array at looped index is equal to target
+        return result = i //updates result variable to the current index
       }
     }
-  return result
+  return result //returns the current value for result
 };
 
 indexOf(numbers, 40) //?
 
 const map = function (collection, iterator) {
-  results = [];
-  for (let i = 0; i < collection.length; i++) {
-    results.push(iterator(collection[i]));
+  results = []; //gives an empty array to push to
+  for (let i = 0; i < collection.length; i++) { //standard for / i loop
+    results.push(iterator(collection[i])); //runs the helper function on the current element being looped through in array, 
   }
-  return results;
+  return results; //returns the final value of the results array.
 };
 
 module.exports = {
